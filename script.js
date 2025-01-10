@@ -1,13 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav ul li a');
 
+    // Adicionando o redirecionamento para o botão de orçamento
+    const budgetButton = document.querySelector('.home-budget-button');
+    if (budgetButton) {
+        budgetButton.addEventListener('click', function() {
+            window.location.href = 'budget_prev.html';
+        });
+    }
+
     // Faz a página voltar ao topo ao clicar em Tela Inicial
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-
-            navLinks.forEach(link => link.classList.remove('active'));
-            this.classList.add('active');
 
             const targetId = this.getAttribute('href');
             let offset = 0;
