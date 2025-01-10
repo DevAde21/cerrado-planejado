@@ -3,10 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Adicionando o redirecionamento para o botão Sobre
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === 'about_us.html') {
+        if (link.getAttribute('href') === 'scripts/html/about_us.html') {
             link.addEventListener('click', function(event) {
-                event.preventDefault();
-                window.location.href = 'about_us.html';
+                window.location.href = 'scripts/html/about_us.html';
             });
         }
     });
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const budgetButton = document.querySelector('.home-budget-button');
     if (budgetButton) {
         budgetButton.addEventListener('click', function() {
-            window.location.href = 'budget_prev.html';
+            window.location.href = 'scripts/html/budget_prev.html';
         });
     }
 
