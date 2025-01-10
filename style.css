@@ -22,7 +22,7 @@ body {
     background: linear-gradient(to right, #11b411, #005200);
     background-repeat: no-repeat; /* Impede a repetição do background */
     background-size: cover; /* Ajusta o tamanho para cobrir a tela */
-    background-attachment: fixed; /* Garante que o background não role com a página */
+    background-attachment: scroll; /* Garante que o background não role com a página */
 }
 
 /* Estilos do Header */
@@ -506,7 +506,7 @@ h1 {
 /* Estilos da seção Por que nos escolher */
 .choose-us-section {
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 5rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -657,6 +657,30 @@ footer {
     font-size: 17px;
       font-family: "Alice", serif;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media Queries */
 
@@ -1264,8 +1288,9 @@ footer {
 
 
 
- /* Media Query para Mobile Small (max-width: 320px) */
-@media (max-width: 450px) {
+ /* Media Query para Mobile 1*/
+@media (max-width: 819px) and (orientation: portrait),
+(max-width: 949px) and (orientation: landscape){
     /* RESET & GENERAL STYLING */
     html,
     body {
@@ -1686,9 +1711,390 @@ footer {
 
 
 
+/* Media Query para dispositivos com largura entre 900px e 1023px em orientação retrato e 950px e 1023px em paisagem */
+@media (min-width: 820px) and (max-width: 1023px) and (orientation: portrait),
+       (min-width: 950px) and (max-width: 1023px) and (orientation: landscape) {
+
+    /* RESET & GENERAL STYLING */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0; 
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    section {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        margin-top: 0;
+    }
+    /* 1) Estilos para o HEADER (igual ao media query de min-width: 1024px, exceto pelos contatos) */
+    header {
+        height: calc(5rem * 0.7); /* Reduz a altura em 30% */
+        padding: 0;
+    }
+    
+    .container{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .logo img {
+        height: calc(3.5rem * 0.7); /* Reduz a altura em 30% */
+    }
+
+    .logo-text {
+        font-size: calc(1.8rem * 0.7); /* Reduz o tamanho da fonte em 30% */
+    }
+
+    .nav {
+        display: flex;
+        margin-left: 15px;
+    }
+    .nav ul li a {
+        font-size: calc(1.1rem * 0.7); /* Reduz o tamanho da fonte em 30% */
+    }
+
+    .header-contact {
+       display: none;
+    }
+
+    /* 1) Estilos para a HOME (igual ao media query de min-width: 1024px) */
+    .home-main {
+        padding-top: calc(5rem * 0.7);
+    }
+
+    .home-right-box {
+        top: calc(5rem * 0.7);
+        height: calc(35.9375rem * 0.7); /* 30% menor */
+        width: calc(25rem * 0.7)
+    }
+
+    .home-content-box {
+        height: calc(37.5rem * 0.7); /* 30% menor */
+        width: calc(100% - calc(400px * 0.7));
+    }
+
+    .home-budget-button {
+        margin-top: 9.5rem;
+    }
+
+    .home-text-content {
+        padding: 10px; /* Adiciona padding para evitar corte do texto */
+        word-break: break-word; /* Permite quebrar palavras longas */
+        margin-top: -1rem;
+    }
+
+    .home-title {
+        font-size: calc(1.875rem * 0.65); /* Reduz o tamanho do título */
+    }
+
+    .home-body-text {
+        font-size: calc(1.125rem * 0.65); /* Reduz o tamanho do texto do corpo */
+    }
+
+    .home-line-image {
+        margin-top: .1rem;
+    }
+
+    /* 1) Estilos para a seção PRODUTOS (igual ao media query de min-width: 1024px) */
+    .products-main-container {
+        margin-top: 21px;
+        margin-bottom: 21px;
+    }
+
+    .products-arrows-container {
+        width: 724.5px; /* 70% de 1035px */
+        margin-bottom: 10.5px;
+        top: 90px;
+    }
+
+    .products-carousel-container {
+        width: 651px; /* 70% de 930px */
+    }
+
+    .products-carousel-item {
+        width: 210px; /* 70% de 300px */
+        height: 157.5px; /* 70% de 225px */
+        margin-right: 10.5px; /* 70% de 15px */
+    }
+
+    .products-carousel-arrow {
+        width: 31.5px; /* 70% de 45px */
+        height: 42px; /* 70% de 60px */
+    }
+
+    .products-separator {
+        width: 651px; /* 70% de 930px */
+        height: 3.5px;
+        margin-bottom: 7px;
+    }
+
+    /* 2) Estilos para a seção ETAPAS DO PROJETO (Modificado)*/
+    #processo {
+        height: auto;
+        padding: 1rem;
+        margin-top: 0.7rem;
+        padding-bottom: 2rem;
+    }
+    
+    #processo::before {
+        height: 5px;
+    }
+    
+    #processo::after {
+        height: 5px;
+    }
+    
+    #processo::before {
+        top: 10px;
+    }
+    
+    #processo::after {
+        bottom: 10px;
+    }
+    
+    .process-title {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0rem;
+    }
+    
+    .process-steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: -2rem;
+        gap: 1rem;
+    }
+    
+    .process-steps::before {
+        display: none;
+    }
+    
+    .process-card {
+        width: 300px;
+        height: 200px;
+        margin: 0 0 1rem 0;
+        padding: 0.6rem;
+        margin-bottom: 3.2rem;
+        border-radius: 1rem;
+    }
+    
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+        margin: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .process-card::before {
+        font-size: 1.3rem;
+        top: -1.9rem;
+    }
+    
+    .process-card::after {
+        font-size: 3rem;
+        top: -3.6rem;
+    }
+    
+    .card-text {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+/* CHOOSE US */
+#escolher {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#escolher .content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap; /* Permitindo que os elementos quebrem para a próxima linha se necessário */
+    max-width: 800px; /* Limite a largura máxima para evitar que o conteúdo fique muito espalhado */
+}
+
+.choose-us-text-wrapper {
+    text-align: left;
+    align-self: center;
+    width: 100%;
+    max-width: 300px; /* Largura máxima do elemento de texto */
+    margin: 0 5rem 1rem 0; /* Ajustando margens */
+}
+
+.choose-us-title {
+    text-align: left;
+    font-size: 1.6rem;
+    margin: 0 0 0.6rem 0;
+}
+
+.choose-us-line {
+    width: 100%;
+    height: 3px;
+    margin: 0.5rem 0;
+    align-self: flex-start;
+}
+
+.choose-us-card-wrapper {
+    width: 100%;
+    max-width: 350px; /* Largura máxima do card */
+}
+
+.choose-us-card {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+}
+
+.choose-us-item {
+    /* Ajuste para alinhar o ícone com a linha */
+    padding-left: 0;
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.choose-us-item:nth-child(4) {
+    /* Ajuste para alinhar o ícone com a linha */
+    padding-left: 0;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.choose-us-icon {
+    /* Agora o ícone é exibido */
+    display: block;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+}
+
+.choose-us-text {
+    font-size: 0.9rem;
+    padding: 0.3rem 0 0.4rem 0;
+    text-align: left;
+    max-width: 16rem;
+    margin: 0;
+    /* Ajuste para o texto começar após o ícone */
+    padding-left: 3rem;
+}
+
+.choose-us-item:before {
+    top: 0;
+    left: 15px;
+    transform: translateX(0%);
+    width: 3px;
+    height: 100%; /* Altura padrão */
+}
+
+/* Estilos específicos para cada item */
+.choose-us-item:nth-child(1):before {
+    height: 90%; /* Exemplo: Altere para a altura desejada */
+}
+
+.choose-us-item:nth-child(2):before {
+    height: 93%; /* Exemplo: Altere para a altura desejada */
+}
+
+.choose-us-item:nth-child(3):before {
+    height: 92%; /* Exemplo: Altere para a altura desejada */
+}
+.choose-us-item:nth-child(4):before {
+    height: 94%; /* Exemplo: Altere para a altura desejada */
+} 
 
 
-
-
-
-
+        /* FOOTER */
+        footer {
+            margin-top: 0.5rem;
+            padding: 1rem 0 2rem;
+            font-size: 0.8rem;
+        }
+        
+        .footer-content {
+            width: 95%;
+            padding: 0;
+        }
+        
+        .footer-text,
+        .footer-social-link,
+        .footer-copyright {
+            font-size: 0.8rem;
+        }
+        
+        .footer-text br {
+            display: block;
+        }
+        
+        .footer-text{
+            margin-bottom: .5rem;
+        }
+        
+        .footer-social-link {
+            flex-direction: column;
+            text-decoration: none;
+            color: white;
+            align-items: center;
+        }
+        
+        .footer-social-link span {
+            display: none; /* Oculta o texto dentro dos links sociais */
+        }
+        
+        .footer-social a img {
+            display: block;
+            margin: 0;
+            margin-bottom: .3rem;
+            width: auto;
+            height: 20px;
+        }
+        
+        .footer-social a img {
+            display: block;
+            margin-bottom: .3rem;
+            width: auto;
+            height: 20px;
+        }
+        
+        .footer-social-link {
+            font-size: 0; /* Torna o tamanho da fonte zero */
+        }
+        
+        .footer-copyright {
+            margin-top: 2rem;
+            margin-bottom: -.5rem;
+        }
+        
+        .footer-social-icon {
+            margin-right: 0; /* Remove o espaçamento à direita do ícone */
+        }
+    
+        .footer-copyright {
+            margin-top: .5rem;
+            margin-bottom: -.5rem;
+        }
+}
