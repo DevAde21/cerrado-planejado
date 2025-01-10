@@ -1267,7 +1267,7 @@ footer {
 
 
  /* Media Query para Mobile Small (max-width: 320px) */
-@media (max-width: 770px) {
+@media (max-width: 450px) {
     /* RESET & GENERAL STYLING */
     html,
     body {
@@ -1391,7 +1391,13 @@ footer {
         pointer-events: none;
     }
 
+        /* PRODUCTS */
 
+    .products-separator {
+        height: 2.5px;
+        width: 80%;
+        margin: 0 auto 0.6rem;
+    }
 
     /* PROCESS */
     #processo {
@@ -1591,6 +1597,7 @@ footer {
 .choose-us-item:nth-child(4):before {
     height: 94%; /* Exemplo: Altere para a altura desejada */
 } 
+
     /* FOOTER */
     footer {
         margin-top: 0.5rem;
@@ -1599,6 +1606,7 @@ footer {
     }
 
     .footer-content {
+        max-width: 300px;
         width: 95%;
         padding: 0;
     }
@@ -1614,41 +1622,28 @@ footer {
     }
 
     .footer-text{
-        margin-bottom: 1rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem; /* Ajuste o espaçamento entre os ícones aqui */
     }
 
     .footer-social-link {
-        flex-direction: column;
         text-decoration: none;
         color: white;
         margin-bottom: -.7rem;
-        align-items: center;
+        display: flex; /* Garante que os ícones fiquem em linha */
+        align-items: center; /* Alinha os ícones verticalmente */
     }
 
     .footer-social-link span {
         display: none; /* Oculta o texto dentro dos links sociais */
     }
-    
-    .footer-social a img {
-        display: block;
-        margin: 0;
-        margin-bottom: .3rem;
-        width: auto;
-        height: 20px;
-    }
 
-    .footer-social a img {
-        display: block;
-        margin-bottom: .3rem;
-        width: auto;
-        height: 20px;
-    }
-
-    .footer-social-link {
-        flex-direction: column;
-        text-decoration: none;
-        color: white;
-        margin-bottom: -.7rem;
+    .footer-social-icon {
+        width: 20px;
+        height: auto;
     }
 
     .footer-copyright {
