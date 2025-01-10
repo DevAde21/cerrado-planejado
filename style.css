@@ -643,8 +643,6 @@ footer {
     color: white;
     font-size: 17px;
     font-family: "Alice", serif;
-    pointer-events: none; /* Make links non-interactive */
-    cursor: default; /* Set cursor to default */
 }
 
 .footer-social-icon {
@@ -1604,50 +1602,67 @@ footer {
         padding: 1rem 0 2rem;
         font-size: 0.7rem;
     }
-
+    
     .footer-content {
-        max-width: 300px;
         width: 95%;
         padding: 0;
     }
-
+    
     .footer-text,
     .footer-social-link,
     .footer-copyright {
         font-size: 0.7rem;
     }
-
+    
     .footer-text br {
         display: block;
     }
-
+    
     .footer-text{
+        margin-bottom: .5rem;
     }
-
-    .footer-social {
-      display: flex;
-      gap: 1rem; /* Ajuste o espaçamento entre os ícones aqui */
-    }
-
+    
     .footer-social-link {
+        flex-direction: column;
         text-decoration: none;
         color: white;
-        margin-bottom: -.7rem;
-        display: flex; /* Garante que os ícones fiquem em linha */
-        align-items: center; /* Alinha os ícones verticalmente */
+        align-items: center;
     }
-
+    
     .footer-social-link span {
         display: none; /* Oculta o texto dentro dos links sociais */
     }
-
+    
+    .footer-social a img {
+        display: block;
+        margin: 0;
+        margin-bottom: .3rem;
+        width: auto;
+        height: 20px;
+    }
+    
+    .footer-social a img {
+        display: block;
+        margin-bottom: .3rem;
+        width: auto;
+        height: 20px;
+    }
+    
+    .footer-social-link {
+        font-size: 0; /* Torna o tamanho da fonte zero */
+    }
+    
+    .footer-copyright {
+        margin-top: 2rem;
+        margin-bottom: -.5rem;
+    }
+    
     .footer-social-icon {
-        width: 20px;
-        height: auto;
+        margin-right: 0; /* Remove o espaçamento à direita do ícone */
     }
 
     .footer-copyright {
-        margin-top: 2rem;
+        margin-top: .5rem;
         margin-bottom: -.5rem;
     }
 }
