@@ -1,6 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav ul li a');
 
+    // Adicionando o redirecionamento para o botão Sobre
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === 'about_us.html') {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'about_us.html';
+            });
+        }
+    });
+    
     // Adicionando o redirecionamento para o botão de orçamento
     const budgetButton = document.querySelector('.home-budget-button');
     if (budgetButton) {
